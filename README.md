@@ -39,7 +39,16 @@ cegispro2 is a Python 3 application using [pysmt](https://github.com/pysmt/pysmt
 probably is a library built at the Software Modeling and Verification Group of RWTH Aachen to parse and work with pGCL programs and expectations.
 Its internals are [quite extensively documented](https://philipp15b.github.io/probably/), so if there are questions about the input language of cegispro2, you might want to look there.
 
-In the root directory of this repository, run `poetry shell` to enter the virtual environment.
+In the root directory of this repository, run `poetry shell` to enter the virtual environment. cegispro2 can then be run via 
+
+`python3 -m cegispro2.cmd PROGRAM --post POST --prop PROP --invarianttype TYPE --templaterefiner TEMP`
+
+where
+- PROGRAM is a path to a pgcl program parsed by the tool Probably (https://philipp15b.github.io/probably/) (you can find numerous examples in the directories cegispro2/cegispro2/benchmarks/TACAS23_storm, cegispro2/cegispro2/benchmarks/TACAS23_ABSYNTH, cegispro2/cegispro2/benchmarks/TACAS23_EXIST)
+- POST is a postexpectation in Disjoint Normal Form (run python3 -m cegispro2.cmd --help for more info). Examples are given in the first lines of the files contained in the above directories.
+- PROP is a property (specifies the bound that is to be proven, run python3 -m cegispro2.cmd --help for more info). Examples are given in the first lines of the files contained in the above directories.
+- TYPE is either super, sub, or past 
+- templaterefiner is either inductivity, fixed, or variable (cf. Appendix D and run python3 -m cegispro2.cmd --help for more info)
 
 
 ## 3. Accepted Syntax for Loops
