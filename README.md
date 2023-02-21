@@ -48,7 +48,8 @@ where
 - POST is a postexpectation in Disjoint Normal Form (run python3 -m cegispro2.cmd --help for more info). Examples are given in the first lines of the files contained in the above directories.
 - PROP is a property (specifies the bound that is to be proven, run python3 -m cegispro2.cmd --help for more info). Examples are given in the first lines of the files contained in the above directories.
 - TYPE is either super, sub, or past 
-- templaterefiner is either inductivity, fixed, or variable (cf. Appendix D and run python3 -m cegispro2.cmd --help for more info)
+- templaterefiner is either inductivity, fixed, or variable (cf. Appendix D of our paper and run python3 -m cegispro2.cmd --help for more info)
+- Additionally, if --invarianttype sub is set, you can set --cdb to synthesize a subinvariant which is conditionally difference bounded (cf. Aiming Low Is Harder, Hark et al., POPL'20).
 
 
 ## 3. Accepted Syntax for Loops
