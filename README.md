@@ -1,7 +1,7 @@
 # cegispro2: Counterexample Guided Inductive Synthesis (of Inductive Invariants) for Probabilistic Programs
 
-`cegispro2` is the tool to our TACAS'23 paper _"Probabilistic Program Verification via Inductive Synthesis of Inductive Invariants"_.
-cegispro2 employs a CEGIS-style invariant synthesis techniques to solve the following problems:
+`cegispro2` is the tool to our TACAS'23 paper _"Probabilistic Program Verification via Inductive Synthesis of Inductive Invariants"_,
+employing a CEGIS-style invariant synthesis techniques to solve the following problems:
 Given a probabilistic loop C = while(b){body}, cegispro2 verifies:
 
 - `wp[C](f) <= g` by synthesizing superinvariants
