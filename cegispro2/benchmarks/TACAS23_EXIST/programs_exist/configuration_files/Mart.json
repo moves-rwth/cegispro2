@@ -1,0 +1,14 @@
+{
+    "Sample_Points": {
+        "Integers": [
+            "rounds",
+            "b"
+        ]
+    },
+    "wp": {
+        "guard": "[b > 0]",
+        "loopbody": "b=0[0.5]b=2*b;rounds=rounds+1",
+        "pre": ["(b>0)*(0.5*b+2)+rounds"],
+        "post": "rounds"
+    }
+}

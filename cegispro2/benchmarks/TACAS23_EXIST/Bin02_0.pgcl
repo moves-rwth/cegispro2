@@ -1,0 +1,10 @@
+# benchmarks/EXIST/Bin005.pgcl --post "x" --prop "x"
+
+nat n;
+nat x;
+nat y;
+
+while(0 < n){
+    {x:=x+y}[0.1]{skip};
+    n:=n-1
+}

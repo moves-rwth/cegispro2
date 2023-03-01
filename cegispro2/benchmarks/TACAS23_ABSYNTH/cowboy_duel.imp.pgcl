@@ -1,0 +1,12 @@
+#benchmarks/TACAS23_ABSYNTH/cowboy_duel.imp.pgcl --invarianttype past --templaterefiner inductivity --distance 1 --initialstates "[0<flag]"
+
+
+nat flag;
+nat z;
+
+while(0 < flag){
+  {flag:=0}[3/4]{
+     {flag:=0}[1/3]{flag:=1}
+  }
+}
+        

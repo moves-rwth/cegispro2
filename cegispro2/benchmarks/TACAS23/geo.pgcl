@@ -1,0 +1,13 @@
+# benchmarks/TACAS23/geo.pgcl --post "x" --prop "[c<=0]*(2*x+1)"
+# benchmarks/TACAS23/geo.pgcl --post "x" --prop "[c<=0 & x<=0]*(1)"
+
+nat c;
+nat x;
+
+while(c<=0){
+    {c:=1}[0.5]{x:=x+1}
+}
+
+
+
+

@@ -1,0 +1,13 @@
+# Figure 1 on left
+
+var x, n, z
+
+def f():
+    var l_x
+    l_x = x
+    if l_x < n:
+        tick 1
+    	l_x = l_x + unif(0,1)
+    	x = l_x
+    	f()
+    tick 1

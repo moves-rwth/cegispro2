@@ -1,0 +1,19 @@
+# Monte Carlo algorithm
+# An array of n≥2 elements, in which half are ‘a’s and the other half are ‘b’s.
+# Find an ‘a’ in the array
+# Loop until a is found or k iterations
+# Compute the expected number of iterations
+
+def f():
+    var k, flag, z
+    #flag = 1
+    #i = 0
+    while i < k and flag > 0:
+        tick 1
+        prob(1,1):
+        	flag = 0
+        else:
+        	flag = 1
+        i = i + 1
+    tick 1
+        

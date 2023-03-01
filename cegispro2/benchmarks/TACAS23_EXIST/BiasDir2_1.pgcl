@@ -1,0 +1,10 @@
+# benchmarks/EXIST/BiasDir05.pgcl --post "x" --prop "[not (x=y)]*x+[x=y]*0"
+# benchmarks/EXIST/BiasDir05.pgcl --post "x" --prop "[x=y]*0.5+[not (x=y)]*0"
+
+nat x [0,1];
+nat y [0,1];
+
+while(x=y & x<=1 & y<=1){
+    {x:=1}[0.1]{x:=0};
+    {y:=1}[0.1]{y:=0};
+}

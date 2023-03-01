@@ -1,0 +1,13 @@
+,generated_subinv,pre,post,sampling_time,learning_time,verifying_time,total_time
+Bin11_1_0,"x + [n < M] * We are not able to verify an (sub)invariant. 
+ We have learned the         following candidates for (sub)invariant: 
+ (1.000000*M)
+ (-0.500000*n + 0.500000*M + -0.100000*1)
+ (-0.470000*n + 0.550000*M + -0.080000*1)
+ (M^1.000000*1)
+ (-1.000000*n + 1.000000*M)
+ (-0.500000*n + 0.600000*M + -0.100000*1)
+ (0.020000*x + -0.540000*n + 0.570000*M + -0.130000*1)
+ (-0.600000*n + 0.600000*M + -0.300000*1)
+ (0.020000*x + -0.570000*n + 0.630000*M + -0.260000*1)
+ (1)",x + [n<M]*(-0.5*n + 0.5*M),x,17.897424697875977,326.7522020339966,5.561486721038818,350.2420415878296

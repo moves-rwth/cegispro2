@@ -1,0 +1,15 @@
+# benchmarks/TACAS23/brp_family.pgcl --post "[failed=MINFAILED] + [not (failed=MINFAILED)]*0" --prop "[failed<=0 & sent<=0 & 0<MAXSENT & 0<MINFAILED]*0.1"
+# benchmarks/TACAS23/brp_family.pgcl --post "[failed=MINFAILED] + [not (failed=MINFAILED)]*0" --prop "[failed<=0 & sent<=0 & 0<MAXSENT & 0<MINFAILED]*0.05"
+# benchmarks/TACAS23/brp_family.pgcl --post "[failed=MINFAILED] + [not (failed=MINFAILED)]*0" --prop "[failed<=0 & sent<=0 & 0<MAXSENT & 0<MINFAILED]*0.01"
+
+#P<=0.0007997
+
+nat sent [0,8000000];
+nat failed [0,5];
+nat MAXSENT [0,8000000];
+nat MINFAILED;
+
+while(failed<MINFAILED & sent<MAXSENT & MAXSENT <= 8000000 & 5 <= MINFAILED){
+    {failed:=0;sent:=sent+1}[0.99]{failed:=failed+1}
+}
+

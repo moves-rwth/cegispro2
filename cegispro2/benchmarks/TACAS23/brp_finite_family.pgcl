@@ -1,0 +1,14 @@
+# benchmarks/TACAS23/brp_finite_family.pgcl --post "[failed=5] + [not (failed=5)]*0" --prop "[failed<=0 & sent<=0]*0.05"
+# benchmarks/TACAS23/brp_finite_family.pgcl --post "[failed=5] + [not (failed=5)]*0" --prop "[failed<=0 & sent<=0]*0.01"
+# benchmarks/TACAS23/brp_finite_family.pgcl --post "[failed=5] + [not (failed=5)]*0" --prop "[failed<=0 & sent<=0]*0.005"
+
+#P=0.0007997
+
+nat sent [0,8000000];
+nat maxsent [0,8000000];
+nat failed [0,5];
+
+while(failed<5 & sent<maxsent & maxsent < 8000000){
+    {failed:=0;sent:=sent+1}[0.99]{failed:=failed+1}
+}
+

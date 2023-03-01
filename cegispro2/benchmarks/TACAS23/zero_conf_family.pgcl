@@ -1,0 +1,23 @@
+
+#benchmarks/TACAS23/zero_conf_family.pgcl --post "[established=1] + [not (established=1)]*0" --prop "[start=1 & established=0 & curprobe=0]*0.6"
+#benchmarks/TACAS23/zero_conf_family.pgcl --post "[established=1] + [not (established=1)]*0" --prop "[start=1 & established=0 & curprobe=0]*0.555"
+#0.6249 refinement
+#benchmarks/TACAS23/zero_conf_family.pgcl --post "[established=1] + [not (established=1)]*0" --prop "[start=1 & established=0 & curprobe=0]*0.553"
+
+#P=0.5025
+
+nat start [0,1];
+nat established [0,1];
+nat curprobe [0,200000000];
+nat N [100000000,200000000];
+
+while(curprobe < N & established <=0 & start <= 1 & 100000000 <= N & N <= 200000000){
+
+    if(start = 1){
+    {start:=0} [0.5] {start:=0; established:=1}   }
+     else { {curprobe := curprobe + 1} [0.999999999]  {start:=1;curprobe:=0} }
+}
+
+
+
+

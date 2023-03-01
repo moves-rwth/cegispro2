@@ -1,0 +1,12 @@
+# figure 3 on right with T = 2, p = 1/2, K1 = 2, K2 = 5
+
+def f():
+    var x, n, z
+    while x < n:
+        tick 1
+        prob(1,1):
+            x = x + unif(0, 2)      
+        else:
+            x = x + unif(0, 5)
+    tick 1
+

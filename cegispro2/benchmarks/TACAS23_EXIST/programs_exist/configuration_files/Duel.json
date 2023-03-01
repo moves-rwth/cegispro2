@@ -1,0 +1,14 @@
+{
+    "Sample_Points": {
+        "Booleans": [
+            "c",
+            "t"
+        ]
+    },
+    "wp": {
+        "guard": "[c == 1]",
+        "loopbody": "n=n+1;{c=0[0.4]t=0}[t==1]{c=0[0.6]t=1}",
+        "post": "t",
+        "pre": ["1 + c*(-15/19)"]
+    }
+}

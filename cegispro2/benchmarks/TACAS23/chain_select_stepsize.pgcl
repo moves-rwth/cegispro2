@@ -1,0 +1,38 @@
+# benchmarks/TACAS23/chain_select_stepsize.pgcl --post "[1<=c] + [c<1]*0" --prop "[c<=0 & x<=0 & step<=0]*0.7" --fastparse
+# benchmarks/TACAS23/chain_select_stepsize.pgcl --post "[1<=c] + [c<1]*0" --prop "[c<=0 & x<=0 & step<=0]*0.6" --fastparse
+# benchmarks/TACAS23/chain_select_stepsize.pgcl --post "[1<=c] + [c<1]*0" --prop "[c<=0 & x<=0 & step<=0]*0.55" --fastparse
+
+
+# P=0.43987
+
+nat c [0,1];
+nat x [0,10000000];
+nat step [0,10];
+
+while(c<=0 & x<10000000 & 0<=step & step <=10){
+    if(step=0){
+        step:=  (1) : 1/10 + (2) : 1/10 + (3) : 1/10+ (4) : 1/10+ (5) : 1/10+ (6) : 1/10+ (7) : 1/10+ (8) : 1/10 + (9) : 1/10 + (10) : 1/10;
+    }else{
+        if(step <= 2){
+            {c:=1}[0.0000001]{x:=x+step}
+        }else{
+            if(step <= 4){
+                {c:=1}[0.0000002]{x:=x+step}
+            }else{
+                if(step <=6){
+                    {c:=1}[0.0000003]{x:=x+step}
+                }else{
+                    if(step <=8){
+                        {c:=1}[0.0000004]{x:=x+step}
+                    }else{
+                        {c:=1}[0.0000005]{x:=x+step}
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

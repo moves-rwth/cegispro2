@@ -1,0 +1,14 @@
+{
+    "Sample_Points": {
+        "Integers": [
+            "n",
+            "x"
+        ]
+    },
+    "wp": {
+        "guard": "[n > 0]",
+        "loopbody": "x=x+n[0.5]skip;n=n-1",
+        "pre": ["x + [n > 0]*(0.5*n/2)"],
+        "post": "x"
+    }
+}

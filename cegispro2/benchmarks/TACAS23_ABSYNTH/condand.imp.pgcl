@@ -1,0 +1,9 @@
+#benchmarks/TACAS23_ABSYNTH/condand.imp.pgcl --invarianttype past --templaterefiner inductivity --distance 1 --initialstates "[(0 < n & 0 < m)]"
+
+nat n;
+nat m;
+while ((0 < n & 0 < m)) {
+    { n := n - 1; } [1/2] {
+        m := m - 1;
+    }
+}

@@ -1,0 +1,13 @@
+# benchmarks/TACAS23/grid_big.pgcl --post "[a<1000 & 1000<=b] + [not (a<1000 & 1000<=b)]*0" --prop "[a<=0 & b<=0]*0.99"
+# benchmarks/TACAS23/grid_big.pgcl --post "[a<1000 & 1000<=b] + [not (a<1000 & 1000<=b)]*0" --prop "[a<=0 & b<=0]*0.8"
+
+nat a [0,1000];
+nat b [0,1000];
+
+while(a<1000 & b<1000){
+    {a:=a+1}[0.5]{b:=b+1}
+}
+
+
+
+

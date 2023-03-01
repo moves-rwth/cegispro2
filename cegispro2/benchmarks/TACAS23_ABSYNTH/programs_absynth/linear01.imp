@@ -1,0 +1,11 @@
+def f():
+    var x, z
+    
+    while x >= 2:
+        tick 1
+        prob(1,2):
+            x = x - 1      
+        else:
+            x = x - 2
+    tick 1
+

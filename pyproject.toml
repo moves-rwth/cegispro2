@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "cegispro2"
+version = "0.1.0"
+description = ""
+authors = ["Kevin Batz <kevin.batz@cs.rwth-aachen.de>"]
+license = "n"
+
+[tool.poetry.scripts]
+cegispro2 = "cegispro2.cmd:main"
+
+[tool.poetry.dependencies]
+python = "^3.10.8"
+probably = {git = "https://github.com/Philipp15b/probably.git", rev="414223a362752e8d3cd3e446cf844f127e5b6bdd"}
+six = "^1.15.0"
+PySMT = "^0.9.0"
+click = "^7.1.2"
+attrs = "^19.3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.1"
+pytest-cov = "^2.9.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

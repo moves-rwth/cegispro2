@@ -1,0 +1,16 @@
+# benchmarks/TACAS23/k_geo.pgcl --post "y" --prop "[k<=0 & x<=0 & y<=0]*(N+1)"
+
+
+
+nat k;
+nat N;
+nat x;
+nat y;
+
+while(k<=N){
+    {k:=k+1; y:=y+x; x:=0}[0.5]{x:=x+1}
+}
+
+
+
+

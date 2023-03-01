@@ -1,0 +1,10 @@
+
+# benchmarks/TACAS23_EXIST/Sum01_0.pgcl --post "x" --prop "[0<n]*(x+0.5*n*0.5)+[not (0<n)]*x"
+
+nat n;
+nat x;
+
+while(0 < n){
+    {x:=x+n}[0.5]{skip};
+    n := n - 1;
+}

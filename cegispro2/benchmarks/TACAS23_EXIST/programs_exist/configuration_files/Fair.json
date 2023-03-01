@@ -1,0 +1,17 @@
+{
+    "Sample_Points": {
+        "Booleans": [
+            "c1",
+            "c2"
+        ],
+        "Integers": [
+            "count"
+        ]
+    },
+    "wp": {
+        "guard": "[ c1 + c2 == 0]",
+        "loopbody": "{c1=1,count=count+1}[0.5]skip;{c2=1,count=count+1}[0.5]skip",
+        "pre": ["count", "count + [c1 + c2 == 0] * 1"],
+        "post": "count"
+    }
+}

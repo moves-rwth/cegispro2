@@ -1,0 +1,10 @@
+#benchmarks/TACAS23_ABSYNTH/ber.imp.pgcl --invarianttype past --templaterefiner inductivity --distance 1 --initialstates "[x<n]"
+
+nat x;
+nat n;
+nat r;
+while (x < n) {
+    r := 1 : 1/2 + 0 : 1/2;
+    x := x + r;
+    #tick(1);
+}

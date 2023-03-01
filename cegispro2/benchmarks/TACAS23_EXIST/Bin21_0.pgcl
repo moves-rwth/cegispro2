@@ -1,0 +1,10 @@
+# benchmarks/EXIST/Bin205.pgcl --post "x" --prop "x"
+
+nat n;
+nat x;
+nat y;
+
+while(0 < n){
+    {x:=x+n}[0.5]{x:=x+y};
+    n:=n-1
+}

@@ -1,0 +1,10 @@
+# benchmarks/EXIST/Detm.pgcl --post "count" --prop "[x<=10]*(count + 1) + [10 < x]*count"
+# benchmarks/EXIST/Detm.pgcl --post "count" --prop "count"
+
+nat count;
+nat x;
+
+while(x <= 10){
+    x:=x+1;
+    count := count + 1
+}

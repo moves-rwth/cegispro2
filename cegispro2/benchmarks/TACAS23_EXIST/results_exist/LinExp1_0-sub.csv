@@ -1,0 +1,2 @@
+,generated_subinv,pre,post,sampling_time,learning_time,verifying_time,total_time
+LinExp1_0_0,z + [n > 0] *  (n^1.000000*2),z + [n>0]*2*n,z,44.52695989608765,139.54954433441162,5.035791635513306,189.11271619796753

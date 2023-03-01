@@ -1,0 +1,10 @@
+# benchmarks/TACAS23_EXIST/Bin11_0.pgcl --post "n" --prop "n"
+
+nat n;
+nat x;
+nat M;
+
+while(n < M){
+    {x:=x+1}[0.1]{skip};
+    n:=n+1
+}

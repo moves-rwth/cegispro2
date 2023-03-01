@@ -1,0 +1,2 @@
+,generated_subinv,pre,post,sampling_time,learning_time,verifying_time,total_time
+PrinSys1_0_0,[x==1] * 1 + [x == 0] * 0,[x==1] * 1,[x==1] * 1,2.4962210655212402,7.035959720611572,3.7398900985717773,13.272447109222412

@@ -1,0 +1,15 @@
+{
+    "Sample_Points": {
+        "Probs": [],
+        "Booleans": [
+            "x",
+            "y"
+        ]
+    },
+    "wp": {
+        "guard": "[x == y]",
+        "loopbody": "x=1[0.5]x=0;y=1[0.5]y=0",
+        "post": "x",
+        "pre": ["[x != y] * x", "[x == y] * 0.5"]
+    }
+}

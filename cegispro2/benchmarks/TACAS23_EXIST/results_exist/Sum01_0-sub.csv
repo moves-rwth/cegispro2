@@ -1,0 +1,10 @@
+,generated_subinv,pre,post,sampling_time,learning_time,verifying_time,total_time
+Sum01_0_0,"x + [n > 0] * We are not able to verify an (sub)invariant. 
+ We have learned the         following candidates for (sub)invariant: 
+ (1.000000*n)
+ (0.800000*n + 0.100000*1)
+ (0.810000*n + -0.020000*x + 0.050000*1)
+ (n^1.000000*1)
+ (0.800000*n + -0.400000*1)
+ (0.760000*n + -0.440000*1)
+ (n^1.000000*0)",x + [n > 0]*(0.5*n/2),x,34.28054976463318,322.37173414230347,4.260356903076172,360.9341917037964

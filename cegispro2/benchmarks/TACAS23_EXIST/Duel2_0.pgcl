@@ -1,0 +1,16 @@
+# not a sound lower bound?: we find a super invariant for this:
+# benchmarks/EXIST/Duel0406.pgcl --post "t" --prop "[c=1 & t<=1 & c<= 1]*(1 - (15/19)*c)"
+# benchmark seems unsound... not a lower, but an upper bound! (in paper)
+
+nat c;
+nat t;
+nat n;
+
+while(c=1 & t <=1 & c<=1){
+    n := n + 1;
+    if(t=1){
+        {c:=0}[0.8]{t:=0}
+    }else{
+        {c:=0}[0.4]{t:=1}
+    }
+}

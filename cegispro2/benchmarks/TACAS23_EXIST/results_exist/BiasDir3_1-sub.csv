@@ -1,0 +1,2 @@
+,generated_subinv,pre,post,sampling_time,learning_time,verifying_time,total_time
+BiasDir3_1_0,x + [x == y] *  (-0.500000*x + -0.500000*y + 0.500000*1),[x == y] * 0.5,x,18.575161695480347,77.1543242931366,3.498326301574707,99.22832369804382

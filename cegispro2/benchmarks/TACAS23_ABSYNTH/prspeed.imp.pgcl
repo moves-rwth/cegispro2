@@ -1,0 +1,22 @@
+#benchmarks/TACAS23_ABSYNTH/prspeed.imp.pgcl --invarianttype past --templaterefiner inductivity --distance 1 --initialstates "[x + 3 <= n]"
+
+
+nat x;
+nat y;
+nat m;
+nat n;
+while ((x + 3 <= n)) {
+    if (y < m) {
+        { y := y + 1; } [1/2] {
+            y := y + 0;
+        }
+    } else {
+        { x := x + 0; } [1/4] {
+            { x := x + 1; } [1/3] {
+                { x := x + 2; } [1/2] {
+                    x := x + 3;
+                }
+            }
+        }
+    }
+}

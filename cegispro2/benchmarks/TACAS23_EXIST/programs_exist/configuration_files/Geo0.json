@@ -1,0 +1,18 @@
+{
+    "Sample_Points": {
+        "Booleans": [
+            "flip"
+        ],
+        "Integers": [
+            "z"
+        ]
+    },
+    "wp": {
+        "guard": "[flip == 0]",
+        "loopbody": "flip=1[0.5]z=z+1",
+        "pre": ["z", 
+                "[flip == 0]*0.5", 
+                "z + [flip == 0]*0.5"],
+        "post": "z"
+    }
+}

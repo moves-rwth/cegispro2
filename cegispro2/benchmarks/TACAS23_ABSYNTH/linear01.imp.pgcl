@@ -1,0 +1,8 @@
+#benchmarks/TACAS23_ABSYNTH/linear01.imp.pgcl --invarianttype past --templaterefiner inductivity --distance 1 --initialstates "[2<=x]"
+
+nat x;
+while (2 <= x) {
+    { x := x - 1; } [1/3] {
+        x := x - 2;
+    }
+}

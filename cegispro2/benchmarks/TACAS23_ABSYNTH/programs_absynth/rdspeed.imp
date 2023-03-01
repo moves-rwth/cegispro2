@@ -1,0 +1,10 @@
+def f():
+    var x, y, m, n, z
+
+    while x + 3 <= n:
+        tick 1
+        if y < m:
+            y = y + unif(0, 1)
+        else:
+            x = x + unif(0, 3)
+    tick 1

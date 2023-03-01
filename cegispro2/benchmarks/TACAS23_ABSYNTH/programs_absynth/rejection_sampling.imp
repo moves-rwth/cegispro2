@@ -1,0 +1,26 @@
+# rejection sampling
+
+def f():
+    var x, y, k, n, z
+    while n > 0:
+        tick 1
+        k = 1
+        while k > 0:
+            tick 1
+            prob(1,1):
+                x = 0
+            else:
+                x = 1
+            prob(1,1):
+                y = 0
+            else:
+                y = 1
+            if x = y:
+                k = 1
+            else:
+                k = 0
+        tick 1
+        n = n - 1
+        tick 1
+    tick 1
+

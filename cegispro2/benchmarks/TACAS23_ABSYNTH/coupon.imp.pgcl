@@ -1,0 +1,26 @@
+#benchmarks/TACAS23_ABSYNTH/coupon.imp.pgcl --invarianttype past --templaterefiner inductivity --distance 1 --initialstates "[i<5]"
+
+
+nat i;
+nat z;
+
+while(i < 5){
+	if (i = 0){
+		i := i + 1
+	}else{
+		if (i = 1){
+		    {i:=1}[1/5]{i:=i+1}
+	    }else{
+			if (i = 2){
+			    {i:=2}[2/5]{i:=i+1}
+			}else{
+				if (i = 3){
+				    {i:=3}[3/5]{i:=i+1}
+				}else{
+				    {i:=4}[4/5]{i:=i+1}
+				}
+			}
+		}
+	}
+		#tick 1
+}

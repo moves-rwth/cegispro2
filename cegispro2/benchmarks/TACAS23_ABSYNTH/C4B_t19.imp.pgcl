@@ -1,0 +1,31 @@
+#benchmarks/TACAS23_ABSYNTH/C4B_t19.imp.pgcl --invarianttype past --templaterefiner inductivity --distance 1 --initialstates "[phase=0 & 100<i]"
+
+# flattened two loops in sequence
+
+nat i;
+nat k;
+nat z;
+nat phase;
+
+while(phase < 3){ # phase =3 -> second loop terminates
+    if(phase =0){ # first loop
+       if(100 < i){
+        {i:=i-1}[0.5]{i:=i-0}
+       }else{
+          phase:=1
+       }
+    }else{
+        if(phase = 1){ #transition to second loop
+            i:=i+k;
+            i:=i+50;
+            phase:=2
+        }else{ # second loop
+            if(0 < i){
+               i:=i-1
+            }else{
+               phase:=3
+            }
+        }
+    }
+
+}

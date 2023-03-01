@@ -1,0 +1,16 @@
+# benchmarks/TACAS23/chain.pgcl --post "[c=1] + [not (c=1)]*0" --prop "[c=0 & x=0]*0.8"
+# benchmarks/TACAS23/chain.pgcl --post "[c=1] + [not (c=1)]*0" --prop "[c=0 & x=0]*0.7"
+# benchmarks/TACAS23/chain.pgcl --post "[c=1] + [not (c=1)]*0" --prop "[c=0 & x=0]*0.641"
+
+# Prob for c=0,x=0: 0.632121
+
+nat c [0,1];
+nat x [0,1000000000000];
+
+while(c<=0 & x<1000000000000){
+    {c:=1}[0.000000000001]{x:=x+1}
+}
+
+
+
+

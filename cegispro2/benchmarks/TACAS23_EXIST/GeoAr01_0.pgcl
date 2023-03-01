@@ -1,0 +1,11 @@
+#benchmarks/EXIST/GeoAr05.pgcl --post "x" --prop "x"
+#benchmarks/EXIST/GeoAr05.pgcl --post "x" --prop "[not (z=0)]*(x + y) + [z=0]*x"
+
+
+nat x;
+nat y;
+nat z;
+
+while(not (z=0)){
+    {y:=y+1;z:=0}[0.5]{x:=x+y}
+}

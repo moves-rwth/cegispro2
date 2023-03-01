@@ -1,0 +1,9 @@
+#benchmarks/TACAS23_ABSYNTH/rfing_lv.imp.pgcl --invarianttype past --templaterefiner inductivity --distance 1 --initialstates "[0 < flag]"
+
+
+nat flag;
+nat z;
+while(0<flag){
+    {flag:=0}[1/2]{flag:=1}
+}
+        

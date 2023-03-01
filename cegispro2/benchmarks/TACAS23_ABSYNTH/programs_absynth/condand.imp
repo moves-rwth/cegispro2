@@ -1,0 +1,11 @@
+# conjunction conditional loop
+
+def f():
+    var n, m, z
+    while n > 0 and m > 0:
+        tick 1
+    	prob(1,1):
+    		n = n - 1
+    	else:
+    		m = m - 1
+    tick 1

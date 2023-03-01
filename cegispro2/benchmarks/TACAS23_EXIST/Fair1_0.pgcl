@@ -1,0 +1,12 @@
+# benchmarks/EXIST/Fair0505.pgcl --post "count" --prop "[c1 + c2 = 0]*(1+count) + [not (c1 + c2 = 0)]*count"
+# benchmarks/EXIST/Fair0505.pgcl --post "count" --prop "count"
+
+
+nat c1;
+nat c2;
+nat count;
+
+while(c1 + c2 =0 & c1 <= 0 & c2 <= 0){
+    {c1:=1; count:=count+1}[0.5]{skip};
+    {c2:=1; count:=count+1}[0.5]{skip};
+}

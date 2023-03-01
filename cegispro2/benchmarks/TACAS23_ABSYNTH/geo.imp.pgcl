@@ -1,0 +1,12 @@
+#benchmarks/TACAS23_ABSYNTH/geo.imp.pgcl --invarianttype past --templaterefiner inductivity --distance 1 --initialstates "[term=0]"
+
+
+nat c;
+nat z;
+nat term;
+
+while(term = 0){
+{c:=1; term:=1}[1/2]{c:=0}
+}
+
+        

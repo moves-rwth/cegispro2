@@ -1,0 +1,11 @@
+Adapted from
+@inproceedings{DBLP:conf/pldi/NgoC018,
+  author    = {Van Chan Ngo and
+               Quentin Carbonneaux and
+               Jan Hoffmann},
+  title     = {Bounded expectations: resource analysis for probabilistic programs},
+  booktitle = {{PLDI}},
+  pages     = {496--512},
+  publisher = {{ACM}},
+  year      = {2018}
+}

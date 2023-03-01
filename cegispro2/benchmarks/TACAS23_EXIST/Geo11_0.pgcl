@@ -1,0 +1,9 @@
+# benchmarks/EXIST/Geo105.pgcl --post "z" --prop "z"
+
+nat flip;
+nat z;
+nat x;
+
+while(flip = 0){
+    {flip:=1}[0.5]{x:=2*x; z:=z+1};
+}

@@ -1,0 +1,2 @@
+,generated_subinv,pre,post,sampling_time,learning_time,verifying_time,total_time
+Bin12_1_0,x + [n < M] *  (-0.100000*n + 0.100000*M),x + [n<M]*(-0.1*n + 0.1*M),x,14.754265069961548,198.36761116981506,5.032653331756592,218.17242908477783

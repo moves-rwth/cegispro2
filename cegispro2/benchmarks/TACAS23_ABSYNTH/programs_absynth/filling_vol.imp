@@ -1,0 +1,24 @@
+# filling containers
+
+def f():
+    var vTF, fast, medium, slow, vol, vM, z
+	#fast = 10
+	#medium = 3
+	#slow = 1
+	#vM = 0
+	#vM = vM + unif(0,1)
+
+	while vM <= vTF:
+	    tick 1
+		if vTF < (vM + 10):
+			vM = vM + unif(9,10)
+		else:
+			if vTF < (vM + 3):
+				vM = vM + unif(2,4)
+			else:
+				vM = vM + unif(0,2)
+
+		vM = vM + unif(0,1)
+    tick 1
+        
+

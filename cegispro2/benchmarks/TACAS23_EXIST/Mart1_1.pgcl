@@ -1,0 +1,18 @@
+# is this sound:?
+# benchmarks/TACAS23_EXIST/Mart.pgcl --post "rounds" --prop "[0<b]*(1+rounds)+ [not (0<b)]*rounds"
+
+# benchmarks/TACAS23_EXIST/Mart.pgcl --post "rounds" --prop "rounds"
+
+
+#Withput cdb: finds unsound sub-invariant 1/4*b +rounds +2.0
+# with cdb: makes it sound!
+# benchmarks/EXIST/Mart.pgcl --post "rounds" --prop "rounds" --templaterefiner inductivity --invarianttype sub --nousemotzkin --debuglog --optimizing-synthesizer --cdb
+
+nat b;
+nat rounds;
+nat c;
+
+while(0 < b){
+    {b:=0}[0.5]{b:=2*b};
+    rounds := rounds + 1
+}

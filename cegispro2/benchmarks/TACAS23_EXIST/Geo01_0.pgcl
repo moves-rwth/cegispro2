@@ -1,0 +1,10 @@
+# benchmarks/EXIST/Geo005.pgcl --post "z" --prop "[flip=0]*(z+0.5) + [not (flip=0)]*z"
+# benchmarks/EXIST/Geo005.pgcl --post "z" --prop "z"
+# benchmarks/EXIST/Geo005.pgcl --post "z" --prop "[flip=0]*0.5"
+
+nat flip;
+nat z;
+
+while(flip = 0){
+    {flip:=1}[0.5]{z:=z+1};
+}

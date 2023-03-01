@@ -1,0 +1,10 @@
+,generated_subinv,pre,post,sampling_time,learning_time,verifying_time,total_time
+Duel2_0_0,"t + [c == 1] * We are not able to verify an (sub)invariant. 
+ We have learned the         following candidates for (sub)invariant: 
+ (-1.000000*t)
+ (0.300000*c + -0.700000*t + 0.300000*1)
+ (0.270000*c + -0.670000*t + 0.270000*1)
+ (0)
+ (0.300000*c + -0.600000*t + 0.300000*1)
+ (0.280000*c + -0.620000*t + 0.280000*1)
+ (0.250000*c + -0.620000*t + 0.250000*1)",1 + c*(-5/11),t,42.5414617061615,496.9883568286896,10.21566367149353,549.851114988327

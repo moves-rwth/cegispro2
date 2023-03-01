@@ -1,0 +1,20 @@
+# benchmarks/TACAS23/zero_conf.pgcl --post "[established=1] + [not (established=1)]*0" --prop "[start=1 & established=0 & curprobe=0]*0.53"
+#benchmarks/TACAS23/zero_conf.pgcl --post "[established=1] + [not (established=1)]*0" --prop "[start=1 & established=0 & curprobe=0]*0.526"
+#benchmarks/TACAS23/zero_conf.pgcl --post "[established=1] + [not (established=1)]*0" --prop "[start=1 & established=0 & curprobe=0]*0.5251"
+
+#P=0.5249792
+
+nat start [0,1];
+nat established [0,1];
+nat curprobe [0,100000000];
+
+while(curprobe < 100000000 & established <=0 & start <= 1){
+
+    if(start = 1){
+    {start:=0} [0.5] {start:=0; established:=1}   }
+     else { {curprobe := curprobe + 1} [0.999999999]  {start:=1;curprobe:=0} }
+}
+
+
+
+

@@ -1,0 +1,25 @@
+#no refinement:
+# benchmarks/TACAS23/equal_prob_grid_family.pgcl --post "[goal=1] + [not (goal=1)]*0" --prop "[a<=0 & b<=0 & goal <=0 ]*0.6" --fastparse
+
+
+nat a;
+nat b;
+nat N;
+nat goal; # initially 0, in the end either 1 or 2
+
+while(a<=N & b<=N & goal=0){
+
+    if(b=N){
+        {goal:=1}[0.5]{goal:=2}
+    }else{
+        if(a=N){
+            a:=a-1
+        }else{
+            {a:=a+1}[0.5]{b:=b+1}
+        }
+    }
+}
+
+
+
+

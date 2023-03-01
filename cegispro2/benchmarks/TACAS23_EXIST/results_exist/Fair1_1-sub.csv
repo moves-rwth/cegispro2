@@ -1,0 +1,2 @@
+,generated_subinv,pre,post,sampling_time,learning_time,verifying_time,total_time
+Fair1_1_0,count + [ c1 + c2 == 0] *  (1.000000*1),count + [c1 + c2 == 0] * 1,count,11.112473964691162,22.23939609527588,3.695371627807617,37.04783892631531

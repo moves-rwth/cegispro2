@@ -1,0 +1,91 @@
+#crowds(6,5)
+# benchmarks/TACAS23/qcomp/crowds.pgcl --post "[1 < observe0] + [not (1 < observe0)]*0"
+#--prop "[launch=1 & new = 0 & runCount=6 & start=0 & run=0 & lastSeen=20 & good=0 & bad =0 & recordLast=0 & badObserve = 0 & deliver = 0 & done=0 & observe0=0 & observe1=0 & observe2=0 & observe3=0 & observe4=0]*0.5"
+
+
+#nat TotalRuns; =6
+#nat CrowdSize; =5
+#nat MaxGood=20;
+
+nat launch [0,1]; # true
+nat new [0,1]; #false
+nat runCount [0,6]; #TotalRuns
+nat start [0,1]; #false
+nat run [0,1]; #false
+nat lastSeen [0,4]; #MaxGood
+nat good [0,1]; #false
+nat bad [0,1]; #false
+nat recordLast [0,1]; #false
+nat badObserve [0,1]; #false
+nat deliver [0,1]; #false
+nat done [0,1]; #false
+
+nat observe0 [0,6]; # 0
+nat observe1 [0,6]; # 0
+nat observe2 [0,6]; # 0
+nat observe3 [0,6]; # 0
+nat observe4 [0,6]; # 0
+
+
+
+while(0 < runCount & observe0 <= 1 & launch<=1 & new<=1 & runCount<=6 & start<=1 & run<=1&lastSeen<=4&good<=1&bad<=1&recordLast<=1&badObserve<=1&deliver<=1&done<=1&observe0<=6&observe1<=6&observe2<=6&observe3<=6&observe4<=6){
+   if(launch =1){
+        new:=1; runCount:=6; launch :=0;
+   }else{
+
+   if(new=1 & 0 < runCount){
+    new:=0;start:=1;runCount:=runCount-1
+   }else{
+        if(start=1){
+            lastSeen:=0;run:=1;deliver:=0;start:=0
+        }else{
+            if(good=0 & bad=0 & deliver =0 &run=1){
+                {bad:=1;badObserve:=1;run:=0}[0.091]{good:=1;recordLast:=1;run:=0}
+            }else{
+                if(good=1 & deliver = 0 & run=1){
+                    {good:=0}[0.8]{deliver:=1}
+                }else{
+                    if(recordLast =1){
+                        recordLast:=0;run:=1;
+                        lastSeen := 0 : 1/5 +  1 : 1/5 + 2 : 1/5 + 3 : 1/5 + 4 : 1/5 ;
+                    }else{
+                        if(lastSeen=0 & badObserve = 1 & observe0<6){
+                            observe0 := observe0 +1; deliver := 1; run:=1;badObserve:=0
+                        }else{
+                            if(lastSeen=1 & badObserve = 1 & observe1<6){
+                                observe1 := observe1 +1; deliver := 1; run:=1;badObserve:=0
+                            }else{
+                                if(lastSeen=2 & badObserve = 1 & observe2<6){
+                                    observe2 := observe2 +1; deliver := 1; run:=1;badObserve:=0
+                                }else{
+                                    if(lastSeen=3 & badObserve = 1 & observe3<6){
+                                        observe3 := observe3 +1; deliver := 1; run:=1;badObserve:=0
+                                    }else{
+                                        if(lastSeen=4 & badObserve = 1 & observe4<6){
+                                            observe4 := observe4 +1; deliver := 1; run:=1;badObserve:=0
+                                        }else{
+                                            if(deliver =1 & run=1){
+                                                done:=1; deliver:=0;run:=0;good:=0;bad:=0
+                                            }else{
+                                                if(done = 1){
+                                                    new:=1; done:=0; run:=0; lastSeen:=20
+                                                }else{
+                                                    skip
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+   }
+   }
+}
+
+
+
+

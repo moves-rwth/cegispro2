@@ -1,0 +1,10 @@
+
+# benchmarks/EXIST/RevBin05.pgcl --post "z" --prop "[0<x]*(x+z)+[not (0<x)]*z"
+# benchmarks/EXIST/RevBin05.pgcl --post "z" --prop "z"
+nat x;
+nat z;
+
+while(0 < x){
+    {x:=x-1}[0.5]{skip};
+    z := z + 1
+}

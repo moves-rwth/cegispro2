@@ -1,0 +1,2 @@
+,generated_subinv,pre,post,sampling_time,learning_time,verifying_time,total_time
+Detm1_0_0,count + [x <= 10] * 0,count,count,3.997868537902832,15.413554191589355,3.391106605529785,22.803083896636963

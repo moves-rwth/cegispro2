@@ -1,0 +1,30 @@
+#benchmarks/TACAS23_ABSYNTH/rejection_sampling.imp.pgcl --invarianttype past --templaterefiner inductivity --distance 1 --initialstates "[0 < n & phase =0]"
+
+nat x;
+nat y;
+nat k;
+nat n;
+nat z;
+nat phase; #phase = 0 -> outer loop p1, phase = 1 -> inner loop, phase = 2 -> outer loop p2,
+
+while(0<n){
+    if(phase = 0){
+       k:=1;phase:=1
+    }else{
+       if(phase = 1){
+          if(0<k){
+            {x:=0}[1/2]{x:=1};
+            {y:=0}[1/2]{y:=1};
+            if(x=y){
+                k:=1
+            }else{
+                k:=0
+            }
+          }else{
+             phase:= 2
+          }
+       }else{
+          n:=n-1;phase:=0
+       }
+    }
+}

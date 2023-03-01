@@ -1,0 +1,10 @@
+#benchmarks/TACAS23_ABSYNTH/no_loop.imp.pgcl --invarianttype past --templaterefiner inductivity --distance 1 --initialstates "[term=0]"
+
+nat flag;
+nat z;
+nat term;
+
+while(term = 0){
+    term := 1;
+    {flag:=0}[1/3]{{flag:=1}[1/2]{flag:=1}}
+}

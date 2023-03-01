@@ -1,0 +1,10 @@
+# benchmarks/EXIST/Gambler.pgcl --post "z" --prop "z"
+
+
+nat x;
+nat y;
+nat z;
+
+while(0 < x & x < y){
+    {x:=x+1}[0.5]{x:=x-1;z:=z+1};
+}

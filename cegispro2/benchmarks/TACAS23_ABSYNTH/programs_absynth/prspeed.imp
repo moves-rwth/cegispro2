@@ -1,0 +1,22 @@
+def f():
+    var x, y, m, n, z
+
+    while x + 3 <= n:
+        tick 1
+        if y < m:
+            prob(1,1):
+                y = y + 1
+            else:
+                y = y + 0
+        else:
+            prob(1,3):
+                x = x + 0
+            else:
+                prob(1,2):
+                  x = x + 1
+                else:
+                    prob(1,1):
+                        x = x + 2
+                    else:
+                        x = x + 3
+    tick 1
