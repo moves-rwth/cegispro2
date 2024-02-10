@@ -25,7 +25,7 @@ See [here](https://python-poetry.org/docs/) for installation instructions for po
 In the root directory of this repository, run `poetry install` to install the dependencies in a new virtual environment.
 
 We used [z3](https://github.com/Z3Prover/z3) 4.8.17 for our experiments.
-To install this version of z3, first run `poetry shell` to enter the virtual environment, then run `pip3 z3-solver==4.8.17`. You are now ready to run cegispro2.
+To install this version of z3, first run `poetry shell` to enter the virtual environment, then run `pip3 install z3-solver==4.8.17`. You are now ready to run cegispro2.
 
 ## 2. Usage
 
