@@ -1,0 +1,18 @@
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/bounded_rw_multi_step.pgcl --post "[x=20000] + [not (x=20000)]*0" --prop "[x=1]*0.4"
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/bounded_rw_multi_step.pgcl --post "[x=20000] + [not (x=20000)]*0" --prop "[x=1]*0.3"
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/bounded_rw_multi_step.pgcl --post "[x=20000] + [not (x=20000)]*0" --prop "[x=1]*0.2"
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/brp.pgcl --post "[failed=5] + [not (failed=5)]*0" --prop "[failed<=0 & sent<=0]*0.1"
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/brp.pgcl --post "[failed=5] + [not (failed=5)]*0" --prop "[failed<=0 & sent<=0]*0.001"
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/brp.pgcl --post "[failed=5] + [not (failed=5)]*0" --prop "[failed<=0 & sent<=0]*0.0008"
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/chain.pgcl --post "[c=1] + [not (c=1)]*0" --prop "[c=0 & x=0]*0.8"
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/chain.pgcl --post "[c=1] + [not (c=1)]*0" --prop "[c=0 & x=0]*0.7"
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/chain.pgcl --post "[c=1] + [not (c=1)]*0" --prop "[c=0 & x=0]*0.641"
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/chain_select_stepsize.pgcl --post "[1<=c] + [c<1]*0" --prop "[c<=0 & x<=0 & step<=0]*0.7" --fastparse
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/chain_select_stepsize.pgcl --post "[1<=c] + [c<1]*0" --prop "[c<=0 & x<=0 & step<=0]*0.6" --fastparse
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/chain_select_stepsize.pgcl --post "[1<=c] + [c<1]*0" --prop "[c<=0 & x<=0 & step<=0]*0.55" --fastparse
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/grid_big.pgcl --post "[a<1000 & 1000<=b] + [not (a<1000 & 1000<=b)]*0" --prop "[a<=0 & b<=0]*0.99"
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/grid_small.pgcl --post "[a<10 & 10<=b] + [not (a<10 & 10<=b)]*0" --prop "[a<=0 & b<=0]*0.8"
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/grid_small.pgcl --post "[a<10 & 10<=b] + [not (a<10 & 10<=b)]*0" --prop "[a<=0 & b<=0]*0.7"
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/zero_conf.pgcl --post "[established=1] + [not (established=1)]*0" --prop "[start=1 & established=0 & curprobe=0]*0.53"
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/zero_conf.pgcl --post "[established=1] + [not (established=1)]*0" --prop "[start=1 & established=0 & curprobe=0]*0.526"
+source $(poetry env info --path)/bin/activate && python3 -m cegispro2.cmd cegispro2/benchmarks/CAV22/zero_conf.pgcl --post "[established=1] + [not (established=1)]*0" --prop "[start=1 & established=0 & curprobe=0]*0.5251"

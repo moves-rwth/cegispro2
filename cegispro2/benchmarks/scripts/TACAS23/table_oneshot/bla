@@ -1,0 +1,15 @@
+; Variable declarations
+(declare-fun a () Real)
+(declare-fun b () Real)
+(declare-fun d () Real)
+
+; Constraints
+
+(assert (<= d 0.99))
+(assert (<= (+ (* 0.99 (+ (* 99 b) d)) (* 0.01 1)) (+ (* 98 b) d)))
+
+
+
+; Solve
+(check-sat)
+(get-model)
